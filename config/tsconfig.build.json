@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es5",
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "../build"
+  },
+  "files": [
+    "../src/shared.module.ts"
+  ],
+  "angularCompilerOptions": {
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "shared.module.js",
+    "flatModuleId": "shared.module"
+  }
+}
