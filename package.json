@@ -1,23 +1,23 @@
 {
   "name": "gw-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gateway modules",
   "module": "build/shared.module.js",
   "main": "build/shared.module.js",
   "types": "build/shared.module.d.ts",
   "scripts": {
-    "clean": "rm -rf build && rm -rf dist",
+    "clean": "rm -rf build && rm -rf build",
     "ngc": "ngc -p config/tsconfig.build.json",
-    "rollup:fesm": "rollup build/shared.module.js -o dist/shared.module.js",
-    "rollup:umd": "rollup build/shared.module.js -o dist/shared.module.umd.js --format umd --name shared.module",
-    "copy-metadata": "find build/* -not -name '*.js' -exec cp -t dist {} +",
+    "rollup:fesm": "rollup build/shared.module.js -o build/shared.module.js",
+    "rollup:umd": "rollup build/shared.module.js -o build/shared.module.umd.js --format umd --name shared.module",
+    "copy-metadata": "find build/* -not -name '*.js' -exec cp -t build {} +",
     "build": "npm run clean && npm run ngc ",
     "test": "karma start config/karma.conf.js",
     "test:watch": "npm run test -- --auto-watch --no-single-run",
     "publish-lib": "npm run test && npm run build"
   },
   "files": [
-    "dist"
+    "build"
   ],
   "keywords": [
     "angular",
